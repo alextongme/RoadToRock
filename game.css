@@ -1,10 +1,9 @@
 body {
   margin: 0;
   background: #000;
-  width: 1800px;
-  height: 1000px;
 }
-video {
+
+video { /* Technique for video background from codepen from username dudleystorey */
     position: fixed;
     top: 50%;
     left: 50%;
@@ -14,15 +13,34 @@ video {
     height: auto;
     z-index: -100;
     transform: translateX(-50%) translateY(-50%);
-    background: url('') no-repeat;
     background-size: cover;
     transition: 1s opacity;
+    filter: blur(40px);
 }
 
-.container {
-    margin-top: 100px;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: white;
-    opacity:;
+.main {
+  display: block;
+  background-color: white;
+  margin-top: 25px;
+  width: 1300px;
+  height: 750px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 20px;
+  opacity: .8;
+}
+
+.play {
+  margin: 0 auto;
+  display:block;
+  width: 500px;
+  height: 100px;
+}
+
+.answer {
+  margin: 0 auto;
+  display: block;
+  font-size: 100px;
+  text-align: center;
 }
