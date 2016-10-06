@@ -20,10 +20,11 @@ video { /* Technique for video background from codepen from username dudleystore
 
 .main {
   display: block;
-  background-color: white;
+  background-color: black;
+  color: white;
   margin-top: 25px;
   width: 1300px;
-  height: 750px;
+  height: 740px;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
@@ -36,6 +37,7 @@ video { /* Technique for video background from codepen from username dudleystore
   display:block;
   width: 500px;
   height: 100px;
+  font-size: 70px;
 }
 
 .answer {
@@ -43,4 +45,24 @@ video { /* Technique for video background from codepen from username dudleystore
   display: block;
   font-size: 100px;
   text-align: center;
+}
+
+h1 {
+  font-family: 'Monoton', cursive;
+}
+
+.scoreboard {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  font-family: 'Monoton', cursive;
+  font-size: 40px;
+}
+
+.score{
+  display: inline-block;
+}
+
+.strikes {
+  display: inline-block;
 }

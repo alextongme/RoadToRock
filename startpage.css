@@ -1,7 +1,7 @@
 body {
   margin: 0;
   background: #000;
-  
+
 }
 video {
     position: fixed;
@@ -44,6 +44,14 @@ h1 {
   opacity: .4;
   color: white;
   font-family: 'Monoton', cursive;
+}
+
+.username {
+  display: block;
+  margin: 0 auto;
+  font-size: 80px;
+  text-align: center;
+  margin-top: 50px;
 }
 
 .container {

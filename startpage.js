@@ -9,7 +9,7 @@ function reblur () {
   $('.container').css('filter','blur(10px)')
 }
 
-$('.start').hover(unblur, reblur)
+$('.container').hover(unblur, reblur)
 
 function playMusic() {
     soundTrack = new Audio("heartbreaker.mp3"); //plays audio when startpage is loaded

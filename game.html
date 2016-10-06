@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Game</title>
+    <title>Road to Rock</title>
     <link rel='stylesheet' type='text/css' href='game.css'>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src='game.js'></script>
@@ -10,19 +10,34 @@
   </head>
 
   <body>
-    <video poster="" id="bgvid" playsinline autoplay muted loop>
+    <!-- My video background -->
+    <video poster="#" id="bgvid" playsinline autoplay muted loop>
     <source src="IntroVideo.mp4" type="video/mp4">
     </video>
 
     <div class='main'>
-      <h1>Level 1</h1>
+      <h1>ROAD TO ROCK</h1>
       <button class='play'>PLAY</button>
       <h1>Name the artist of the following song.</h1>
+      <form onSubmit="return false;">
+      <!-- In order to prevent enter key from refreshing the entire page upon clicking enter. -->
+        <input class='answer' id='answer' type='text' placeholder='Artist Name'></input>
+        <input type='submit' class='submit'></input>
+      </form>
       <h2>You only get one listen! So slap on some headphones and listen carefully.</h2>
-      <form>
-      <input class='answer' id='answer' type='text'></input>
-      <input type='button' value='submit' class='submit'></input>
-    </form>
+      
+      <div class='scoreboard'>
+        <div class='score'>
+        <h2>Score</h2>
+        <div class='points'>0</div>
+      </div>
+
+        <div class='strikes'>
+        <h2>Strikes</h2>
+        <div class='negativepoints'>0</div>
+      </div>
+    </div>
+
     </div>
 
 
