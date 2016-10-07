@@ -2,18 +2,20 @@ $(document).ready(function() { //LOAD DOM
 console.log('DOM LOADED');
 
 //ALL VARIABLES
-  //MUSIC FILES
-var ledzep = new Audio("LedZeppelin.mp3");
-var kansas = new Audio("Kansas.mp3");
-var eagles = new Audio("TheEagles.mp3");
-var rollingstones = new Audio("RollingStones.mp3");
-var hollies = new Audio("TheHollies.mp3");
-var blueoystercult = new Audio("BlueOysterCult.mp3");
-var blacksabbath = new Audio("BlackSabbath.mp3");
-var heart = new Audio("Heart.mp3");
-var lynyrdskynyrd = new Audio("LynyrdSkynyrd.mp3");
-var pinkfloyd = new Audio("PinkFloyd.mp3");
-var rodstewart = new Audio("RodStewart.mp3");
+  //MUSIC FILES LEVEL 1
+var ledzep = new Audio("./levelone/LedZeppelin.mp3");
+var kansas = new Audio("./levelone/Kansas.mp3");
+var eagles = new Audio("./levelone/TheEagles.mp3");
+var rollingstones = new Audio("./levelone/RollingStones.mp3");
+var hollies = new Audio("./levelone/TheHollies.mp3");
+var blacksabbath = new Audio("./levelone/BlackSabbath.mp3");
+var heart = new Audio("./levelone/Heart.mp3");
+var lynyrdskynyrd = new Audio("./levelone/LynyrdSkynyrd.mp3");
+var pinkfloyd = new Audio("./levelone/PinkFloyd.mp3");
+var rodstewart = new Audio("./levelone/RodStewart.mp3");
+
+  // MUSIC FILES LEVEL 2
+var blueoystercult = new Audio("./levelone/BlueOysterCult.mp3");
 
   //ARRAY OF SONGS AND ANSWERS
 var songs = [{
@@ -31,10 +33,6 @@ var songs = [{
   {
     song: rollingstones,
     bandname: 'ROLLING STONES'
-  },
-  {
-    song: blueoystercult,
-    bandname: 'BLUE OYSTER CULT'
   },
   {
     song: heart,
@@ -60,7 +58,7 @@ var songs = [{
     song: hollies,
     bandname: 'HOLLIES'
   }];
-  
+
   // ADDITIONAL VARIABLES
 var score = 0;
 var strikes = 0;
@@ -98,6 +96,7 @@ function checkValue (event) { //FUNCTION TO CHECK IF USER INPUT MATCHES THE ARTI
   $('.answer')[0].value = ''; //resets the input text field for the next question
   stopMusic(); //stop music from playing and proceed to next round
   update(); //update scoreboard
+  checkWin();
 }
 
 function update() { //UPDATES THE DISPLAYED SCOREBOARD
@@ -118,11 +117,34 @@ function playMusic() { //PLAYS MUSIC WHEN PLAY BUTTON IS TRIGGERED
   $('.play').unbind('click'); //FIX THIS. USER HAS TO BE ABLE TO CLICK AGAIN
 }
 
+function checkWin () { //check if player won and plays congrats video
+  // if (songNumber == 10 && score > 7 ) {
+  if (songNumber == 1) {
+  $('.main').remove(); //removes entire gameboard
+  $('body').append("<h1 class='congrats'>YOU WON! You're a star!</h1>"); //displays congrats message
+  $('#bgvid')[0].muted = false; //unmutes the video
+  $('video').css('filter', 'blur(0px)'); //removes the blue
+  $('video')[0].currentTime = 0; //restarts the video to beginning
+  }
+}
+
+function invert () {
+  $('.play').css('filter','invert(100%)');
+  $('.guitarist').attr('src', 'guitarist.gif');
+}
+
+function deinvert () {
+  $('.play').css('filter','');
+  $('.guitarist').attr('src', 'guitarist.jpg');
+}
+
 //CLICK EVENT LISTENERS
 $('.play').click(playMusic); //Music only plays when button is clicked.
+$('.play').hover(invert,deinvert)
 $('.submit').click(checkValue); //Submit value: Resets input, stops music
 
 //EXECUTIONS UPON LOAD
 shuffle(songs);
+
 
 });

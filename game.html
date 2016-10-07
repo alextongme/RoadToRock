@@ -8,36 +8,44 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src='game.js'></script>
     <link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
   </head>
 
   <body>
     <!-- My video background -->
     <video poster="#" id="bgvid" playsinline autoplay muted loop>
-    <source src="IntroVideo.mp4" type="video/mp4">
+    <source src="ledzeppelin.mp4" type="video/mp4">
     </video>
 
     <div class='main'>
       <h1>ROAD TO ROCK</h1>
-      <button class='play'>PLAY</button>
-      <h1>Name the artist of the following song.</h1>
-      <form onSubmit="return false;">
-      <!-- In order to prevent enter key from refreshing the entire page upon clicking enter. -->
-        <input class='answer' id='answer' type='text' placeholder='Artist Name'></input>
-        <input type='submit' class='submit'></input>
-      </form>
-      <h2>You only get one listen! So slap on some headphones and listen carefully.</h2>
 
       <div class='scoreboard'>
         <div class='score'>
-        <h2>Score</h2>
-        <div class='points'>0</div>
-      </div>
+          <div class='scoretitle'>Score</div>
+          <div class='points'>0</div>
+        </div>
 
         <div class='strikes'>
-        <h2>Strikes</h2>
-        <div class='negativepoints'>0</div>
+          <div class ='scoretitle'>Strikes</div>
+          <div class='negativepoints'>0</div>
+        </div>
       </div>
-    </div>
+
+      <h2>Name the artist of the following song.</h2>
+      <h2>You only get one listen! So slap on some headphones and listen carefully.</h2>
+      <div class= 'play'>
+        <img class='guitarist' src='guitarist.jpg' alt='guitarist'/>
+        <div class='playbutton'>ROCK!</div>
+      </div>
+
+      <form onSubmit="return false;">
+      <!-- In order to prevent enter key from refreshing the entire page upon clicking enter. -->
+        <input class='answer' id='answer' type='text' placeholder='BAND'></input>
+        <input type='submit' class='submit'></input>
+      </form>
+
+
 
     </div>
 

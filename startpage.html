@@ -8,6 +8,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src='startpage.js'></script>
     <link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
   </head>
 
   <body>
@@ -18,9 +19,12 @@
     <div class='container'>
       <h1>ROAD TO ROCK</h1>
       <h2>Think you know classic rock?</h2>
-      <form method='GET' action='game.html'>
+      <form id='choices' method='GET' action=''>
         <input class='username' type='text' placeholder='ENTER YOUR NAME' name='FirstName'>
-        <input type='submit' value='start'>
+        <button class ='radio' rel='game.html' type='radio' name='easy' id='easy'>EASY</button>
+        <button class ='radio' type="radio" name="medium" value="http://www.yahoo.com"> MEDIUM </button>
+        <button class ='radio' type="radio" name="hard" value="http://www.google.com"> HARD </button>
+        
       </form>
 
     </div>
