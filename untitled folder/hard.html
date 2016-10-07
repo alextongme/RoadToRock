@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Road to Rock</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />`
+    <link rel='stylesheet' type='text/css' href='hard.css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src='hard.js'></script>
+    <link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  </head>
+
+  <body>
+    <!-- My video background -->
+    <video poster="#" id="bgvid" playsinline autoplay muted loop>
+    <source src="ledzeppelin.mp4" type="video/mp4">
+    </video>
+
+    <div class='main'>
+      <h1>ROAD TO ROCK</h1>
+
+      <div class='scoreboard'>
+        <div class='score'>
+          <div class='scoretitle'>Score</div>
+          <div class='points'>0</div>
+        </div>
+
+        <div class='strikes'>
+          <div class ='scoretitle'>Strikes</div>
+          <div class='negativepoints'>0</div>
+        </div>
+      </div>
+
+      <h2>Name the artist of the following song.</h2>
+      <h2>You only get one listen! So slap on some headphones and listen carefully.</h2>
+      <div class= 'play'>
+        <img class='guitarist' src='guitarist.jpg' alt='guitarist'/>
+        <div class='playbutton'>ROCK!</div>
+      </div>
+
+      <form onSubmit="return false;">
+      <!-- In order to prevent enter key from refreshing the entire page upon clicking enter. -->
+        <input class='answer' id='answer' type='text' placeholder='BAND'></input>
+        <input type='submit' class='submit'></input>
+      </form>
+
+
+
+    </div>
+
+
+  </body>
+</html>

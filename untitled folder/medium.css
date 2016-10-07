@@ -1,0 +1,132 @@
+body {
+  margin: 0;
+  background: #000;
+}
+
+video { /* Technique for video background from codepen from username dudleystorey */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+    background-size: cover;
+    transition: 1s opacity;
+    filter: blur(40px);
+}
+
+.main {
+  display: block;
+  background-color: black;
+  color: white;
+  width: 1300px;
+  height: 800px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  border-radius: 20px;
+  opacity: .8;
+}
+
+.play {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 40px;
+  background-color: white;
+  width: 500px;
+  height: 180px;
+  border-radius: 50px;
+  border: solid #D4AF37 5px;
+}
+
+.guitarist {
+  display: inline-block;
+  width: 200px;
+  height: 150px;
+  border-radius: 50px;
+}
+
+.playbutton {
+  display: inline-block;
+  font-size: 70px;
+  color: black;
+  font-family: 'Monoton', cursive;
+  font-weight: lighter;
+}
+
+.answer {
+  margin: 0 auto;
+  margin-top: 50px;
+  display: block;
+  font-size: 80px;
+  text-align: center;
+  border-radius: 50px;
+  color: black;
+  font-family: 'Raleway', sans-serif;
+}
+
+h1 {
+  font-family: 'Monoton', cursive;
+  font-size: 100px;
+  font-weight: lighter;
+  margin: 0;
+  color: #D4AF37;
+  animation-name: roadtorock;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  -webkit-animation-name: roadtorock; /* Compatibiltiy for Chrome, Safari, Opera */
+  -webkit-animation-duration: 3s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+}
+
+@keyframes roadtorock {
+    from {color: #D4AF37;}
+    to {color: black;}
+}
+
+@-webkit-keyframes roadtorock {
+    from {color: #D4AF37;}
+    to {color: black;}
+}
+
+h2 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 20px;
+}
+
+.scoreboard {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  text-align: center;
+  font-family: 'Monoton', cursive;
+  font-size: 50px;
+}
+
+.scoretitle {
+  color: #D4AF37;
+}
+
+.score {
+  margin-right: 100px;
+}
+
+.strikes {
+  margin-left: 100px;
+}
+
+.submit {
+  display: none;
+}
+
+.congrats {
+  display: block;
+  text-align: center;
+}

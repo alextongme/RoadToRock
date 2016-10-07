@@ -14,9 +14,6 @@ var lynyrdskynyrd = new Audio("./levelone/LynyrdSkynyrd.mp3");
 var pinkfloyd = new Audio("./levelone/PinkFloyd.mp3");
 var rodstewart = new Audio("./levelone/RodStewart.mp3");
 
-  // MUSIC FILES LEVEL 2
-var blueoystercult = new Audio("./levelone/BlueOysterCult.mp3");
-
   //ARRAY OF SONGS AND ANSWERS
 var songs = [{
   song: ledzep,
@@ -94,6 +91,7 @@ function checkValue (event) { //FUNCTION TO CHECK IF USER INPUT MATCHES THE ARTI
     strikes ++;
   }
   $('.answer')[0].value = ''; //resets the input text field for the next question
+  $('.speaker').attr('src', 'speaker.png');
   stopMusic(); //stop music from playing and proceed to next round
   update(); //update scoreboard
   checkWin();
@@ -115,26 +113,27 @@ function playMusic() { //PLAYS MUSIC WHEN PLAY BUTTON IS TRIGGERED
   var soundTrack = songs[songNumber].song;
   soundTrack.play();
   $('.play').unbind('click'); //FIX THIS. USER HAS TO BE ABLE TO CLICK AGAIN
+  $('.speaker').attr('src', 'speaker.gif'); //MAKES SPEAKERS MOVE WHEN MUSIC PLAYS
 }
 
 function checkWin () { //check if player won and plays congrats video
-  // if (songNumber == 10 && score > 7 ) {
-  if (songNumber == 1) {
+  if (songNumber == 10 && strikes < 3) {
   $('.main').remove(); //removes entire gameboard
   $('body').append("<h1 class='congrats'>YOU WON! You're a star!</h1>"); //displays congrats message
   $('#bgvid')[0].muted = false; //unmutes the video
+  $('#bgvid')[0].volume = 0.1; //adjust volume of video
   $('video').css('filter', 'blur(0px)'); //removes the blue
   $('video')[0].currentTime = 0; //restarts the video to beginning
   }
 }
 
-function invert () {
-  $('.play').css('filter','invert(100%)');
+function invert () { //inverts play button and also makes the rocker move by changing gif
+  // $('.play').css('filter','invert(100%)');
   $('.guitarist').attr('src', 'guitarist.gif');
 }
 
 function deinvert () {
-  $('.play').css('filter','');
+  // $('.play').css('filter','');
   $('.guitarist').attr('src', 'guitarist.jpg');
 }
 
