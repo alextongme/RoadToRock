@@ -18,9 +18,11 @@
     <div class='container'>
       <h1>ROAD TO ROCK</h1>
       <h2>Think you know classic rock?</h2>
-      <form onSubmit="return false;">
-        <input class='username' type='text' placeholder='ENTER YOUR NAME'></input>
-      <button class='start' onclick='window.location.href="game.html"'>START</button>
+      <form method='GET' action='game.html'>
+        <input class='username' type='text' placeholder='ENTER YOUR NAME' name='FirstName'>
+        <input type='submit' value='start'>
+      </form>
+
     </div>
 
   </body>

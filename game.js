@@ -9,6 +9,11 @@ var eagles = new Audio("TheEagles.mp3");
 var rollingstones = new Audio("RollingStones.mp3");
 var hollies = new Audio("TheHollies.mp3");
 var blueoystercult = new Audio("BlueOysterCult.mp3");
+var blacksabbath = new Audio("BlackSabbath.mp3");
+var heart = new Audio("Heart.mp3");
+var lynyrdskynyrd = new Audio("LynyrdSkynyrd.mp3");
+var pinkfloyd = new Audio("PinkFloyd.mp3");
+var rodstewart = new Audio("RodStewart.mp3");
 
   //ARRAY OF SONGS AND ANSWERS
 var songs = [{
@@ -32,9 +37,30 @@ var songs = [{
     bandname: 'BLUE OYSTER CULT'
   },
   {
+    song: heart,
+    bandname: 'HEART'
+  },
+  {
+    song: rodstewart,
+    bandname: 'ROD STEWART'
+  },
+  {
+    song: blacksabbath,
+    bandname: 'BLACK SABBATH'
+  },
+  {
+    song: lynyrdskynyrd,
+    bandname: 'LYNYRD SKYNYRD'
+  },
+  {
+    song: pinkfloyd,
+    bandname: 'PINK FLOYD'
+  },
+  {
     song: hollies,
     bandname: 'HOLLIES'
   }];
+  
   // ADDITIONAL VARIABLES
 var score = 0;
 var strikes = 0;
