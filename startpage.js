@@ -17,7 +17,7 @@ function playMusic() {
 }
 
 function showSelected() {
-  $(this).css('filter','grayscale(100%)');
+  $(this).css('filter','sepia(100%)');
 }
 
 function removeSelected() {
@@ -36,10 +36,10 @@ $('.radio').click(function (event){ //directs user to different page depending o
 });
 
 $('.container').hover(unblur, reblur); // blurs the content unless hovered over
-
 $('#easy').hover(showSelected,removeSelected); //changes color of button when clicked
 $('#medium').hover(showSelected,removeSelected);
 $('#hard').hover(showSelected,removeSelected);
+$('.username').focus(); //places focus on text answer box
 
 //EXECUTIONS
 playMusic();

@@ -53,10 +53,11 @@ video { /* Technique for video background from codepen from username dudleystore
 
 .playbutton {
   display: inline-block;
-  font-size: 50px;
+  font-size: 35px;
   color: black;
   font-family: 'Monoton', cursive;
   font-weight: lighter;
+  margin-left: -40px;
 }
 
 .answer {

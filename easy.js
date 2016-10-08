@@ -137,10 +137,12 @@ function deinvert () {
   $('.guitarist').attr('src', 'guitarist.jpg');
 }
 
+
 //CLICK EVENT LISTENERS
 $('.play').click(playMusic); //Music only plays when button is clicked.
 $('.play').hover(invert,deinvert)
 $('.submit').click(checkValue); //Submit value: Resets input, stops music
+$('.answer').focus(); //places focus on text answer box
 
 //EXECUTIONS UPON LOAD
 shuffle(songs);
