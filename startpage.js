@@ -6,9 +6,9 @@ function unblur () {
   $('.container').css('filter','none')
 }
 
-function reblur () {
-  $('.container').css('filter','blur(10px)')
-}
+// function reblur () {
+//   $('.container').css('filter','blur(10px)')
+// }
 
 function playMusic() {
     soundTrack = new Audio("heartbreaker.mp3"); //plays audio when startpage is loaded
@@ -25,7 +25,7 @@ function removeSelected() {
 }
 
 //EVENT LISTENERS
-$(document).on("keypress", "form", function(event) { //prevents anything from happening when entered is clicked
+$(document).on("keypress", "form", function(event) { //prevents anything from happening when enter button is clicked
     return event.keyCode != 13;
 });
 
@@ -35,7 +35,7 @@ $('.radio').click(function (event){ //directs user to different page depending o
    $('#choices').attr('action', diff);
 });
 
-$('.container').hover(unblur, reblur); // blurs the content unless hovered over
+$('.username').hover(unblur); // blurs the content unless hovered over
 $('#easy').hover(showSelected,removeSelected); //changes color of button when clicked
 $('#medium').hover(showSelected,removeSelected);
 $('#hard').hover(showSelected,removeSelected);

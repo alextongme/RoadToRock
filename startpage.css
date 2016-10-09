@@ -1,8 +1,8 @@
 body {
   margin: 0;
   background: #000;
-
 }
+
 video {
     position: fixed;
     top: 50%;
@@ -79,7 +79,7 @@ h2 {
   text-align: center;
   margin-top: 60px;
   border-radius: 50px;
-  color: black;
+  color: white;
   font-family: 'Raleway', sans-serif;
   border: 0;
   background-color: transparent;
@@ -106,4 +106,56 @@ h2 {
   color: black;
   margin-left: 10px;
   margin-right: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    display: block;
+    width: 100%;
+    filter: blur(0px);
+  }
+
+  .radio {
+    display: block;
+    width: 100%;
+    border-radius: 0px;
+    margin: 0 auto;
+    height: 125px;
+  }
+
+  video {
+    display: none;
+  }
+
+   h1 {
+     display: block;
+     margin-top: 0px;
+     padding-bottom: 10px;
+     height: 125px;
+     font-size: 70px;
+     background-color: black;
+     padding-top: 10px;
+     box-sizing: border-box;
+     width: 100%;
+   }
+
+   h2 {
+     display: block;
+     height: 125px;
+     font-size: 40px;
+     padding-top: 20px;
+     background-color: black;
+     box-sizing: border-box;
+     width: 100%;
+   }
+
+   .username {
+     display: block;
+     background-color: white;
+     height: 125px;
+     margin-top: 0px;
+     border-radius: 0px;
+     width: 100%;
+   }
+
 }

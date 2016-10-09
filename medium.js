@@ -3,57 +3,57 @@ console.log('DOM LOADED');
 
 //ALL VARIABLES
   //MUSIC FILES LEVEL 1
-var ledzep = new Audio("./easy/LedZeppelin.mp3");
-var kansas = new Audio("./easy/Kansas.mp3");
-var eagles = new Audio("./easy/TheEagles.mp3");
-var rollingstones = new Audio("./easy/RollingStones.mp3");
-var hollies = new Audio("./easy/TheHollies.mp3");
-var blacksabbath = new Audio("./easy/BlackSabbath.mp3");
-var heart = new Audio("./easy/Heart.mp3");
-var lynyrdskynyrd = new Audio("./easy/LynyrdSkynyrd.mp3");
-var pinkfloyd = new Audio("./easy/PinkFloyd.mp3");
-var rodstewart = new Audio("./easy/RodStewart.mp3");
+var acdc = new Audio("./medium/LedZeppelin.mp3");
+var blueoystercult = new Audio("./medium/BlueOysterCult.mp3");
+var boston = new Audio("./medium/boston.mp3");
+var creedence = new Audio("./medium/creedence.mp3");
+var jimihendrix = new Audio("./medium/jimihendrix.mp3");
+var scorpions = new Audio("./medium/scorpions.mp3");
+var animals = new Audio("./medium/theanimals.mp3");
+var kinks = new Audio("./medium/thekinks.mp3");
+var who = new Audio("./medium/thewho.mp3");
+var zztop = new Audio("./medium/zztop.mp3");
 
   //ARRAY OF SONGS AND ANSWERS
 var songs = [{
-  song: ledzep,
-  bandname: 'LED ZEPPELIN'
+  song: acdc,
+  bandname: 'ACDC'
   },
   {
-    song: kansas,
-    bandname: 'KANSAS'
+    song: blueoystercult,
+    bandname: 'BLUE OYSTER CULT'
   },
   {
-    song: eagles,
-    bandname: 'EAGLES'
+    song: boston,
+    bandname: 'BOSTON'
   },
   {
-    song: rollingstones,
-    bandname: 'ROLLING STONES'
+    song: creedence,
+    bandname: 'CREEDENCE CLEARWATER REVIVAL'
   },
   {
-    song: heart,
-    bandname: 'HEART'
+    song: jimihendrix,
+    bandname: 'JIMI HENDRIX'
   },
   {
-    song: rodstewart,
-    bandname: 'ROD STEWART'
+    song: scorpions,
+    bandname: 'SCORPIONS'
   },
   {
-    song: blacksabbath,
-    bandname: 'BLACK SABBATH'
+    song: animals,
+    bandname: 'ANIMALS'
   },
   {
-    song: lynyrdskynyrd,
-    bandname: 'LYNYRD SKYNYRD'
+    song: kinks,
+    bandname: 'KINKS'
   },
   {
-    song: pinkfloyd,
-    bandname: 'PINK FLOYD'
+    song: who,
+    bandname: 'WHO'
   },
   {
-    song: hollies,
-    bandname: 'HOLLIES'
+    song: zztop,
+    bandname: 'ZZ TOP'
   }];
 
   // ADDITIONAL VARIABLES
