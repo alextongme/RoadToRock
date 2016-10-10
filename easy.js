@@ -133,6 +133,7 @@ function checkWin () { //check if player won and plays congrats video
   else if (songNumber == 10 && strikes < 3) {
     $('.main').remove(); //removes entire gameboard
     $('body').append("<h1 class='congrats'>YOU WON! You're a star!</h1>"); //displays congrats message
+    $('body').append("<h1 class='congrats'>" + score + "/10</h1>")
     $('#bgvid')[0].muted = false; //unmutes the video
     $('#bgvid')[0].volume = 0.8; //adjust volume of video
     $('video').css('filter', 'blur(0px)'); //removes the blur
@@ -160,30 +161,30 @@ function openModal() { //OPENS MODAL WHEN INSTRUCTION BUTTON IS CLICKED
     modal.style.display = "block";
 }
 
-//CLICK EVENT LISTENERS
+// EVENT LISTENERS
 $('.play').click(playMusic); //Music only plays when button is clicked.
-$('.play').hover(invert,deinvert)
+$('.play').hover(invert,deinvert) // makes gif move when hovered over
 $('.submit').click(checkValue); //Submit value: Resets input, stops music
 $('.answer').focus(); //places focus on text answer box
 $(document).click(closeModal); //closes modal when document is clicked
 $('.myBtn').click(openModal);//opens modal when instruction button is clicked
 
+
 //EXECUTIONS UPON LOAD
-shuffle(songs);
+shuffle(songs); //shuffles the array of songs before playing game
+$('#bgvid')[0].muted = true; //mutes the background video
 
-//
-
+// IN ORDER TO GET PLAYERS NAME FROM FIRST PAGE TO SECOND
 var parseQueryString = function( queryString ) { // loop that takes the URL and separates into an array
     var params = {}
-    var queries;
-    var temp;
-    var l;
+    var info;
+    var objdata;
     // Split into key/value pairs
-    queries = queryString.split("&");
+    info = queryString.split("&");
     // Convert the array of strings into an object
-    for (var i = 0; i < queries.length; i++) {
-        temp = queries[i].split('=');
-        params[temp[0]] = temp[1]; // splits array values again and assigns it to keys and values
+    for (var i = 0; i < info.length; i++) {
+        objdata = info[i].split('=');
+        params[objdata[0]] = objdata[1]; // splits array values again and assigns it to keys and values
     }
     return params;
 };

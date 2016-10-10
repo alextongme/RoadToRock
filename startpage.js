@@ -6,10 +6,6 @@ function unblur () {
   $('.container').css('filter','none')
 }
 
-// function reblur () {
-//   $('.container').css('filter','blur(10px)')
-// }
-
 function playMusic() {
     soundTrack = new Audio("heartbreaker.mp3"); //plays audio when startpage is loaded
     soundTrack.play();
