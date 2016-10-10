@@ -7,7 +7,7 @@ function unblur () {
 }
 
 function playMusic() {
-    soundTrack = new Audio("https://raw.githubusercontent.com/tongsalex/tongsalex.github.io/master/heartbreaker.mp3"); //plays audio when startpage is loaded
+    soundTrack = new Audio('heartbreaker.mp3'); //plays audio when startpage is loaded
     soundTrack.play();
     soundTrack.loop = true;
 }
