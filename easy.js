@@ -3,16 +3,28 @@ console.log('DOM LOADED');
 
 //ALL VARIABLES
   //MUSIC FILES LEVEL 1
-var ledzep = new Audio("./easy/LedZeppelin.mp3");
-var kansas = new Audio("./easy/Kansas.mp3");
-var eagles = new Audio("./easy/TheEagles.mp3");
-var rollingstones = new Audio("./easy/RollingStones.mp3");
-var hollies = new Audio("./easy/TheHollies.mp3");
-var blacksabbath = new Audio("./easy/BlackSabbath.mp3");
-var heart = new Audio("./easy/Heart.mp3");
-var lynyrdskynyrd = new Audio("./easy/LynyrdSkynyrd.mp3");
-var pinkfloyd = new Audio("./easy/PinkFloyd.mp3");
-var rodstewart = new Audio("./easy/RodStewart.mp3");
+// var ledzep = new Audio("./easy/LedZeppelin.mp3");
+// var kansas = new Audio("./easy/Kansas.mp3");
+// var eagles = new Audio("./easy/TheEagles.mp3");
+// var rollingstones = new Audio("./easy/RollingStones.mp3");
+// var hollies = new Audio("./easy/TheHollies.mp3");
+// var blacksabbath = new Audio("./easy/BlackSabbath.mp3");
+// var heart = new Audio("./easy/Heart.mp3");
+// var lynyrdskynyrd = new Audio("./easy/LynyrdSkynyrd.mp3");
+// var pinkfloyd = new Audio("./easy/PinkFloyd.mp3");
+// var rodstewart = new Audio("./easy/RodStewart.mp3");
+
+var ledzep = new Audio("https://raw.githubusercontent.com/tongsalex/tongsalex.github.io/master/easy/LedZeppelin.mp3");
+var kansas = new Audio("https://raw.githubusercontent.com/tongsalex/tongsalex.github.io/master/easy/Kansas.mp3");
+var eagles = new Audio("https://raw.githubusercontent.com/tongsalex/tongsalex.github.io/master/easy/TheEagles.mp3");
+var rollingstones = new Audio("https://raw.githubusercontent.com/tongsalex/tongsalex.github.io/master/easy/RollingStones.mp3");
+var hollies = new Audio("https://raw.githubusercontent.com/tongsalex/tongsalex.github.io/master/easy/TheHollies.mp3");
+var blacksabbath = new Audio("https://raw.githubusercontent.com/tongsalex/tongsalex.github.io/master/easy/BlackSabbath.mp3");
+var heart = new Audio("https://raw.githubusercontent.com/tongsalex/tongsalex.github.io/master/easy/Heart.mp3");
+var lynyrdskynyrd = new Audio("https://raw.githubusercontent.com/tongsalex/tongsalex.github.io/master/easy/LynyrdSkynyrd.mp3");
+var pinkfloyd = new Audio("https://raw.githubusercontent.com/tongsalex/tongsalex.github.io/master/easy/PinkFloyd.mp3");
+var rodstewart = new Audio("https://raw.githubusercontent.com/tongsalex/tongsalex.github.io/master/easy/RodStewart.mp3");
+
 
   //ARRAY OF SONGS AND ANSWERS
 var songs = [{
