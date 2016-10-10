@@ -1,4 +1,8 @@
-# first_game
+# ROAD TO ROCK
+
+Link to Game:
+
+http://tongsalex.github.io
 
 Hello all! Here is my first project for General Assembly's Web Development Intensive.
 
@@ -10,3 +14,5 @@ CSS
 JAVASCRIPT & JQUERY
 
 VIDEO CITATIONS
+
+![Screenshot](./screenshots/trulia.png)
