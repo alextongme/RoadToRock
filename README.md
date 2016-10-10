@@ -14,6 +14,14 @@ CSS
 JAVASCRIPT & JQUERY
 
 VIDEO CITATIONS
+Jimi Hendrix: https://www.youtube.com/watch?v=wDvlErh5zcc
+Led Zeppelin: https://www.youtube.com/watch?v=DohsUDR7otk&index=1&list=PLiEZ9LQoMtiWgd2LukE9vR6zXvcGLDE5h
+Beatles: https://www.youtube.com/watch?v=TMrCL-tWTCc
+Doors: https://www.youtube.com/watch?v=A7KRVAWx3nU
+Rolling Stones:
+Kiss: 
+Lose Video: https://www.youtube.com/watch?v=M5QGkOGZubQ
+Congrats Video: https://www.youtube.com/watch?v=jtN8oBjMr_E
 
 ![Screenshot](./screenshots/trulia.png)
 
