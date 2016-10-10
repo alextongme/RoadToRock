@@ -12,7 +12,7 @@
   </head>
 
   <body>
-    <video poster="#" id="bgvid" src="ledzeppelin.mp4" type="video/mp4" playsinline autoplay loop>
+    <video id="bgvid" src="ledzeppelin.mp4" type="video/mp4" playsinline autoplay loop>
     </video>
 
     <div class="instructionModal">
@@ -28,12 +28,12 @@
 
       <h1>ROAD TO ROCK</h1>
       <div class ='topdiv'>
-        <img class='speaker1' src='speaker.png'/>
+        <img class='speakers' id='speaker1' src='speaker.png'/>
         <div class='playerinfo'>
         <h1>Player Name</h1>
         <h2 class='playername'></h2>
         </div>
-        <img class='speaker2' src='speaker.png'/>
+        <img class='speakers' id='speaker2' src='speaker.png'/>
       </div>
 
       <div class='scoreboard'>
@@ -55,7 +55,7 @@
 
       <form onSubmit="return false;">
         <input class='answer' id='answer' type='text' placeholder='TYPE ANSWER HERE'></input>
-        <input type='submit' class='submit'></input>
+        <input type='submit' class='submit' value='Submit'></input>
       </form>
 
       <button class="myBtn">INSTRUCTIONS</button>
