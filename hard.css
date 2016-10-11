@@ -1,0 +1,309 @@
+body {
+  margin: 0;
+  background: black;
+}
+
+video { /* Technique for video background from codepen from username dudleystorey */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+    background-size: cover;
+    transition: 1s opacity;
+    filter: blur(40px);
+}
+
+.main {
+  display: block;
+  background-color: black;
+  color: white;
+  width: 1300px;
+  height: 800px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  border-radius: 20px;
+  opacity: .8;
+}
+
+.play {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 40px;
+  background-color: white;
+  width: 400px;
+  height: 150px;
+  border-radius: 50px;
+  border: solid #D4AF37 5px;
+}
+
+.guitarist {
+  display: inline-block;
+  width: 200px;
+  height: 150px;
+  border-radius: 50px;
+}
+
+.playbutton {
+  display: inline-block;
+  font-size: 35px;
+  color: black;
+  font-family: 'Monoton', cursive;
+  font-weight: lighter;
+  margin-left: -40px;
+}
+
+.answer {
+  margin: 0 auto;
+  margin-top: 30px;
+  display: block;
+  font-size: 75px;
+  text-align: center;
+  border-radius: 50px;
+  color: black;
+  font-family: 'Raleway', sans-serif;
+  border: 0;
+}
+
+h1 {
+  font-family: 'Monoton', cursive;
+  font-size: 100px;
+  font-weight: lighter;
+  margin: 0;
+  color: #D4AF37;
+  animation-name: roadtorock;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  -webkit-animation-name: roadtorock; /* Compatibiltiy for Chrome, Safari, Opera */
+  -webkit-animation-duration: 3s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+}
+
+@keyframes roadtorock {
+    from {color: #D4AF37;}
+    to {color: black;}
+}
+
+@-webkit-keyframes roadtorock {
+    from {color: #D4AF37;}
+    to {color: black;}
+}
+
+h2 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 20px;
+  margin: 0;
+  color: white;
+}
+
+h3 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 90px;
+  margin: 0;
+  color: white;
+}
+
+
+.scoreboard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  text-align: center;
+  font-family: 'Monoton', cursive;
+  font-size: 50px;
+}
+
+.scoretitle {
+  color: #D4AF37;
+}
+
+.score {
+  margin-right: 100px;
+  margin-left: 100px;
+}
+
+.strikes {
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.submit {
+  display: block;
+  position: absolute;
+  left: -9999px;
+}
+
+.congrats {
+  display: block;
+  text-align: center;
+}
+
+.speaker {
+  width: 200px;
+  height: 200px;
+}
+
+#speaker1 {
+  margin-right: 130px;
+}
+
+#speaker2 {
+  margin-left: 130px;
+}
+
+.directions {
+  margin-top: -40px;
+}
+
+.topdiv {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.myBtn {
+  width: 300px;
+  height: 50px;
+  margin-top: 30px;
+  border-radius: 50px;
+  border: solid #D4AF37 5px;
+  background-color: black;
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  font-size: 20px;
+}
+
+/* The Modal (background) */
+.instructionModal {
+    display: block;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.instructions {
+    background-color: rgb(0,0,0);
+    margin: 15% auto;
+    padding: 20px;
+    border: solid #D4AF37 3px;
+    border-radius: 50px;
+    width: 80%;
+    text-align: center;
+}
+
+.instructions h2 {
+  margin-top: 20px;
+}
+
+.playerinfo h1 {
+  font-size: 40px;
+  display: block;
+  width: 400px;
+}
+
+.playerinfo h2 {
+  display: block;
+  margin-top: 15px;
+  font-size: 30px;
+  width: 100%;
+}
+
+.congrats {
+  margin-top: 200px;
+  text-align: center;
+  font-size: 60px;
+}
+
+@media only screen and (max-width: 768px) {
+  video {
+    display: none;
+  }
+
+  .main {
+    width: 100%;
+    height: 100%
+  }
+
+  #speaker1 {
+    display: none;
+  }
+
+  #speaker2 {
+    display: none;
+  }
+
+  h1 {
+    display: block;
+    width: 100%;
+    font-size: 40px;
+  }
+
+  .answer {
+    width: 100%;
+    font-size: 30px;
+    border-radius: 0px;
+  }
+
+  .scoreboard {
+    display: block;
+  }
+
+  .scoretitle {
+    font-size: 30px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+  }
+
+  .points {
+    font-size: 30px;
+    margin-bottom: -20px;
+  }
+
+  .negativepoints {
+    font-size: 30px;
+    margin-bottom: -20px;
+  }
+
+  /* The Modal (background) */
+  .instructionModal {
+      display: block;
+      position: fixed; /* Stay in place */
+      z-index: 1; /* Sit on top */
+      width: 100%; /* Full width */
+      height: 100%; /* Full height */
+      overflow: auto; /* Enable scroll if needed */
+      background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+
+  /* Modal Content/Box */
+  .instructions {
+      background-color: rgb(0,0,0);
+      margin: 15% auto;
+      padding: 20px;
+      border: solid #D4AF37 3px;
+      border-radius: 50px;
+      width: 80%;
+      text-align: center;
+  }
+
+  .myBtn{
+    margin-bottom: 20px;
+  }
+
+}
