@@ -7,7 +7,7 @@ function unblur () {
 }
 
 function playMusic() {
-    soundTrack = new Audio('heartbreaker.mp3'); //plays audio when startpage is loaded
+    soundTrack = new Audio('heartbreaker.m4a'); //plays audio when startpage is loaded
     soundTrack.play();
     soundTrack.loop = true;
 }
