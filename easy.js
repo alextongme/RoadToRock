@@ -24,7 +24,6 @@ var rodstewart = new Audio("./easy/RodStewart.mp3");
 // var lynyrdskynyrd = new Audio("https://raw.githubusercontent.com/tongsalex/tongsalex.github.io/master/easy/LynyrdSkynyrd.mp3");
 // var pinkfloyd = new Audio("https://raw.githubusercontent.com/tongsalex/tongsalex.github.io/master/easy/PinkFloyd.mp3");
 // var rodstewart = new Audio("https://raw.githubusercontent.com/tongsalex/tongsalex.github.io/master/easy/RodStewart.mp3");
-//
 
   //ARRAY OF SONGS AND ANSWERS
 var songs = [{
@@ -80,6 +79,7 @@ queryString = queryString.substring(1); //REMOVES ? FROM URL
 var object = parseQueryString(queryString); // parseQueryString creates the object which is assigned to variable object
 
 //FUNCTIONS
+//https://bost.ocks.org/mike/shuffle/
 function shuffle(array) { //THE STANDARD FISHER YATES SHUFFLE (FOR ARRAY OF SONGS AND ANSWERS)
   var m = array.length, t, i;
   // While there remain elements to shuffle…
@@ -171,6 +171,7 @@ function openModal() { //OPENS MODAL WHEN INSTRUCTION BUTTON IS CLICKED
     modal.style.display = "block";
 }
 
+//METHOD TAKEN FROM JOE ZIM: https://www.joezimjs.com/javascript/the-lazy-mans-url-parsing/
 function parseQueryString(queryString) { // TAKES URL AND MAKES OBJECT IN ORDER TO GET FIRST NAME FROM FIRST PAGE TO SECOND
     var object = {}
     var info;
