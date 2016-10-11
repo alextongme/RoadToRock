@@ -3,7 +3,7 @@ console.log('DOM LOADED');
 
 //ALL VARIABLES
   //MUSIC FILES LEVEL 1
-var acdc = new Audio("./medium/LedZeppelin.mp3");
+var acdc = new Audio("./medium/acdc.mp3");
 var blueoystercult = new Audio("./medium/BlueOysterCult.mp3");
 var boston = new Audio("./medium/boston.mp3");
 var creedence = new Audio("./medium/creedence.mp3");
