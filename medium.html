@@ -12,14 +12,10 @@
   </head>
 
   <body>
-    <!-- Video background -->
-    <video poster="#" id="bgvid" src="ledzeppelin.mp4" type="video/mp4" playsinline autoplay muted loop>
-
+    <video id="bgvid" src="ledzeppelin.mp4" type="video/mp4" playsinline autoplay loop>
     </video>
 
-    <!-- The Modal -->
     <div class="instructionModal">
-      <!-- Modal content -->
       <div class="instructions">
         <h1>Instructions</h1>
         <h2>Name the artist of the following song.</h2>
@@ -28,20 +24,17 @@
       </div>
     </div>
 
-
-
     <div class='main'>
-      <h1>ROAD TO ROCK</h1>
 
+      <h1>ROAD TO ROCK</h1>
       <div class ='topdiv'>
-        <img class='speaker1' src='speaker.png'/>
+        <img class='speaker' id='speaker1' src='speaker.png'/>
         <div class='playerinfo'>
         <h1>Player Name</h1>
         <h2 class='playername'></h2>
         </div>
-        <img class='speaker2' src='speaker.png'/>
+        <img class='speaker' id='speaker2' src='speaker.png'/>
       </div>
-
 
       <div class='scoreboard'>
         <div class='score'>
@@ -61,15 +54,13 @@
     </div>
 
       <form onSubmit="return false;">
-      <!-- In order to prevent enter key from refreshing the entire page upon clicking enter. -->
         <input class='answer' id='answer' type='text' placeholder='TYPE ANSWER HERE'></input>
-        <input type='submit' class='submit'></input>
+        <input type='submit' class='submit' value='Submit'></input>
       </form>
+
       <button class="myBtn">INSTRUCTIONS</button>
 
-
     </div>
-
 
   </body>
 </html>

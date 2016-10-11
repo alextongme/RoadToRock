@@ -63,12 +63,12 @@ var songNumber = 0; //CURRENT SONG IN ARRAY
 var displayScore = $('.points').text(); //KEEPS ACTIVE COUNTING DISPLAY OF SCORE
 var displayStrikes = $('.negativepoints').text(); //KEEPS ACTIVE COUNTING DISPLAY OF STRIKES
 var modal = $('.instructionModal')[0]; //INSTRUCTION MODAL
-var queryString = window.location.search; // takes the URL text
-queryString = queryString.substring(1); // when the URL text is taken, this removes the '?'
-
+var queryString = window.location.search; //GRABS URL
+queryString = queryString.substring(1); //REMOVES ? FROM URL
+var object = parseQueryString(queryString); // parseQueryString creates the object which is assigned to variable object
 
 //FUNCTIONS
-function shuffle(array) { //THE FISHER YATES SHUFFLE (FOR ARRAY OF SONGS AND ANSWERS)
+function shuffle(array) { //THE STANDARD FISHER YATES SHUFFLE (FOR ARRAY OF SONGS AND ANSWERS)
   var m = array.length, t, i;
   // While there remain elements to shuffle…
   while (m) {
@@ -117,8 +117,8 @@ function playMusic() { //PLAYS MUSIC WHEN PLAY BUTTON IS TRIGGERED
   var soundTrack = songs[songNumber].song;
   soundTrack.play();
   $('.play').unbind('click'); //FIX THIS. USER HAS TO BE ABLE TO CLICK AGAIN
-  $('.speaker1').attr('src', 'speaker.gif'); //MAKES SPEAKERS MOVE WHEN MUSIC PLAYS
-  $('.speaker2').attr('src', 'speaker.gif'); //MAKES SPEAKERS MOVE WHEN MUSIC PLAYS
+  $('#speaker1').attr('src', 'speaker.gif'); //MAKES SPEAKERS MOVE WHEN MUSIC PLAYS
+  $('#speaker2').attr('src', 'speaker.gif'); //MAKES SPEAKERS MOVE WHEN MUSIC PLAYS
 }
 
 function checkWin () { //check if player won and plays congrats video
@@ -133,6 +133,7 @@ function checkWin () { //check if player won and plays congrats video
   else if (songNumber == 10 && strikes < 3) {
     $('.main').remove(); //removes entire gameboard
     $('body').append("<h1 class='congrats'>YOU WON! You're a star!</h1>"); //displays congrats message
+    $('body').append("<h1 class='congrats'>" + score + "/10</h1>")
     $('#bgvid')[0].muted = false; //unmutes the video
     $('#bgvid')[0].volume = 0.8; //adjust volume of video
     $('video').css('filter', 'blur(0px)'); //removes the blur
@@ -140,13 +141,11 @@ function checkWin () { //check if player won and plays congrats video
   }
 }
 
-function invert () { //inverts play button and also makes the rocker move by changing gif
-  // $('.play').css('filter','invert(100%)');
+function invert () { //MAKES THE ROCKER GIF ANIMATE
   $('.guitarist').attr('src', 'guitarist.gif');
 }
 
-function deinvert () {
-  // $('.play').css('filter','');
+function deinvert () { //MAKES ROCKER GIF STATIC
   $('.guitarist').attr('src', 'guitarist.jpg');
 }
 
@@ -160,38 +159,29 @@ function openModal() { //OPENS MODAL WHEN INSTRUCTION BUTTON IS CLICKED
     modal.style.display = "block";
 }
 
-//CLICK EVENT LISTENERS
+function parseQueryString(queryString) { // TAKES URL AND MAKES OBJECT IN ORDER TO GET FIRST NAME FROM FIRST PAGE TO SECOND
+    var object = {}
+    var info;
+    var objdata;
+    info = queryString.split("&"); //SPLITS URL BY & SYMBOL
+    for (var i = 0; i < info.length; i++) {
+        objdata = info[i].split('='); //SPLITS AGAIN BY = SIGN
+        object[objdata[0]] = objdata[1]; // TAKES LEFT STRING AND MAKES IT KEY. RIGHT STRING BECOMES VALUE (FIRSTNAME:##)
+    }
+    return object; //MAKES THE OBJECT
+};
+
+// EVENT LISTENERS
 $('.play').click(playMusic); //Music only plays when button is clicked.
-$('.play').hover(invert,deinvert)
+$('.play').hover(invert,deinvert) // makes gif move when hovered over
 $('.submit').click(checkValue); //Submit value: Resets input, stops music
-$('.answer').focus(); //places focus on text answer box
 $(document).click(closeModal); //closes modal when document is clicked
 $('.myBtn').click(openModal);//opens modal when instruction button is clicked
 
 //EXECUTIONS UPON LOAD
-shuffle(songs);
-
-//
-
-var parseQueryString = function( queryString ) { // loop that takes the URL and separates into an array
-    var params = {}
-    var queries;
-    var temp;
-    var l;
-    // Split into key/value pairs
-    queries = queryString.split("&");
-    // Convert the array of strings into an object
-    for (var i = 0; i < queries.length; i++) {
-        temp = queries[i].split('=');
-        params[temp[0]] = temp[1]; // splits array values again and assigns it to keys and values
-    }
-    return params;
-};
-var object = parseQueryString(queryString); // parseQueryString creates the object which is assigned to variable object
-
-$('.playername').text(object.FirstName); // replaces text in the paragraph with the object values.
-
-
-
+shuffle(songs); //shuffles the array of songs before playing game
+$('#bgvid')[0].muted = true; //mutes the background video
+$('.answer').focus(); //places focus on text answer box
+$('.playername').text(object.FirstName); // replaces text with first name player
 
 });
