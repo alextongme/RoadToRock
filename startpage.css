@@ -135,6 +135,7 @@ h2 {
    .username {
      display: block;
      background-color: white;
+     color: black;
      height: 125px;
      margin-top: 0px;
      border-radius: 0px;
