@@ -126,7 +126,7 @@ function checkWin () { //check if player won and plays congrats video
   if (strikes == 3) {
     $('.main').remove(); //removes entire gameboard
     $('body').append("<h1 class='congrats'>You lost! Better luck next time brotha.</h1>"); //displays congrats message
-    $('#bgvid').attr('src','willywonka.mp4');
+    $('#bgvid').attr('src','willywonka.webm');
     $('video').css('filter', 'blur(0px)'); //removes the blur
     $('video')[0].currentTime = 0; //restarts the video to beginning
     $('#bgvid')[0].muted = false; //unmutes the video
