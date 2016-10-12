@@ -3,16 +3,16 @@ console.log('DOM LOADED');
 
 //ALL VARIABLES
   //MUSIC FILES LEVEL 1
-var acdc = new Audio("./medium/acdc.mp3");
-var blueoystercult = new Audio("./medium/BlueOysterCult.mp3");
-var boston = new Audio("./medium/boston.mp3");
-var creedence = new Audio("./medium/creedence.mp3");
-var jimihendrix = new Audio("./medium/jimihendrix.mp3");
-var scorpions = new Audio("./medium/scorpions.mp3");
-var animals = new Audio("./medium/theanimals.mp3");
-var kinks = new Audio("./medium/thekinks.mp3");
-var who = new Audio("./medium/thewho.mp3");
-var zztop = new Audio("./medium/zztop.mp3");
+var acdc = new Audio("./medium/acdc.m4a");
+var blueoystercult = new Audio("./medium/BlueOysterCult.m4a");
+var boston = new Audio("./medium/boston.m4a");
+var creedence = new Audio("./medium/creedence.m4a");
+var jimihendrix = new Audio("./medium/jimihendrix.m4a");
+var scorpions = new Audio("./medium/scorpions.m4a");
+var animals = new Audio("./medium/theanimals.m4a");
+var kinks = new Audio("./medium/thekinks.m4a");
+var who = new Audio("./medium/thewho.m4a");
+var zztop = new Audio("./medium/zztop.m4a");
 
   //ARRAY OF SONGS AND ANSWERS
 var songs = [{
@@ -125,7 +125,7 @@ function checkWin () { //check if player won and plays congrats video
   if (strikes == 3) {
     $('.main').remove(); //removes entire gameboard
     $('body').append("<h1 class='congrats'>You lost! Better luck next time brotha.</h1>"); //displays congrats message
-    $('#bgvid').attr('src','willywonka.mp4');
+    $('#bgvid').attr('src','willywonka.webm');
     $('video').css('filter', 'blur(0px)'); //removes the blur
     $('video')[0].currentTime = 0; //restarts the video to beginning
     $('#bgvid')[0].muted = false; //unmutes the video

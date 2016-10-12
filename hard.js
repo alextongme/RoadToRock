@@ -3,16 +3,16 @@ console.log('DOM LOADED');
 
 //ALL VARIABLES
   //MUSIC FILES LEVEL 1
-var badcompany = new Audio("./hard/badcompany.mp3");
-var bobdylan = new Audio("./hard/bobdylan.mp3");
-var cream = new Audio("./hard/cream.mp3");
-var derekandthedominoes = new Audio("./hard/derekandthedominoes.mp3");
-var fleetwoodmac = new Audio("./hard/fleetwoodmac.mp3");
-var goldenearring = new Audio("./hard/goldenearring.mp3");
-var joewalsh = new Audio("./hard/joewalsh.mp3");
-var loureed = new Audio("./hard/loureed.mp3");
-var steppenwolf = new Audio("./hard/steppenwolf.mp3");
-var yardbirds = new Audio("./hard/yardbirds.mp3");
+var badcompany = new Audio("./hard/badcompany.m4a");
+var bobdylan = new Audio("./hard/bobdylan.m4a");
+var cream = new Audio("./hard/cream.m4a");
+var derekandthedominoes = new Audio("./hard/derekandthedominoes.m4a");
+var fleetwoodmac = new Audio("./hard/fleetwoodmac.m4a");
+var goldenearring = new Audio("./hard/goldenearring.m4a");
+var joewalsh = new Audio("./hard/joewalsh.m4a");
+var loureed = new Audio("./hard/loureed.m4a");
+var steppenwolf = new Audio("./hard/steppenwolf.m4a");
+var yardbirds = new Audio("./hard/yardbirds.m4a");
 
   //ARRAY OF SONGS AND ANSWERS
 var songs = [{
@@ -125,7 +125,7 @@ function checkWin () { //check if player won and plays congrats video
   if (strikes == 3) {
     $('.main').remove(); //removes entire gameboard
     $('body').append("<h1 class='congrats'>You lost! Better luck next time brotha.</h1>"); //displays congrats message
-    $('#bgvid').attr('src','willywonka.mp4');
+    $('#bgvid').attr('src','willywonka.webm');
     $('video').css('filter', 'blur(0px)'); //removes the blur
     $('video')[0].currentTime = 0; //restarts the video to beginning
     $('#bgvid')[0].muted = false; //unmutes the video
