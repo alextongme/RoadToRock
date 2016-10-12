@@ -72,7 +72,7 @@ var object = parseQueryString(queryString); // parseQueryString creates the obje
 function shuffle(array) { //THE STANDARD FISHER YATES SHUFFLE (FOR ARRAY OF SONGS AND ANSWERS)
   var m = array.length, t, i;
   // While there remain elements to shuffle…
-  while (m) {
+  while (m) {b
     // Pick a remaining element…
     i = Math.floor(Math.random() * m--);
     // And swap it with the current element.
