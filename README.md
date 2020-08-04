@@ -1,6 +1,6 @@
 # ROAD TO ROCK
 ## Live Link
-tongsalex.com/roadtorock
+http://tongsalex.com/roadtorock
 
 ## Background
 Hello all! Here is my first web development project. It is a music trivia game that will test all of your classic rock knowledge! See if you're up to the task!
@@ -16,8 +16,8 @@ CSS
 ![Screenshot](./screenshots/roadtorock.png)
 
 ## Video Citations
-Jimi Hendrix: https://www.youtube.com/watch?v=wDvlErh5zcc
-Led Zeppelin: https://www.youtube.com/watch?v=DohsUDR7otk&index=1&list=PLiEZ9LQoMtiWgd2LukE9vR6zXvcGLDE5h
+Jimi Hendrix: https://www.youtube.com/watch?v=wDvlErh5zcc <br />
+Led Zeppelin: https://www.youtube.com/watch?v=DohsUDR7otk&index=1&list=PLiEZ9LQoMtiWgd2LukE9vR6zXvcGLDE5h <br />
 Beatles: https://www.youtube.com/watch?v=TMrCL-tWTCc
 Doors: https://www.youtube.com/watch?v=A7KRVAWx3nU
 Lose Video: https://www.youtube.com/watch?v=M5QGkOGZubQ
