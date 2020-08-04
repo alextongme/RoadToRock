@@ -1,6 +1,6 @@
 # ROAD TO ROCK
 ## Live Link
-[tongsalex.com/roadToRock](http://tongsalex.com/roadtorock)
+[tongsalex.com/roadtorock](http://tongsalex.com/roadtorock)
 
 ## Background
 Hello all! Here is my first web development project. It is a music trivia game that will test all of your classic rock knowledge! See if you're up to the task!
