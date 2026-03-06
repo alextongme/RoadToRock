@@ -12,6 +12,9 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <video id="bgvid" playsinline autoplay muted loop>
+    <source src="IntroVideosmall.webm" type="video/webm">
+  </video>
   <canvas id="noise-canvas"></canvas>
   <div class="grain-overlay"></div>
   <div class="vignette"></div>
@@ -29,6 +32,7 @@
           <input type="text" id="player-name" placeholder="YOUR NAME" autocomplete="off" spellcheck="false">
           <div class="input-line"></div>
         </div>
+        <div class="name-required-hint" id="name-hint">ENTER YOUR NAME FIRST</div>
         <div class="difficulty-label">SELECT DIFFICULTY</div>
         <div class="difficulty-buttons">
           <button class="diff-btn" data-difficulty="easy">
@@ -93,7 +97,7 @@
             <circle cx="32" cy="32" r="30" stroke="currentColor" stroke-width="2"/>
             <polygon points="26,20 26,44 46,32" fill="currentColor"/>
           </svg>
-          <svg class="playing-icon" viewBox="0 0 64 64" fill="none">
+          <svg class="pause-icon" viewBox="0 0 64 64" fill="none">
             <circle cx="32" cy="32" r="30" stroke="currentColor" stroke-width="2"/>
             <rect x="22" y="20" width="7" height="24" rx="2" fill="currentColor"/>
             <rect x="35" y="20" width="7" height="24" rx="2" fill="currentColor"/>
