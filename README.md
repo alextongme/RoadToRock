@@ -1,24 +1,35 @@
-# ROAD TO ROCK
-## Live Link
-[tongsalex.com/roadtorock](http://tongsalex.com/roadtorock)
+# Road to Rock
 
-## Background
-Hello all! Here is my first web development project. It is a music trivia game that will test all of your classic rock knowledge! See if you're up to the task!
+A classic rock music trivia game. Listen to song clips and name the artist — 10 rounds, 3 strikes, and you're out.
 
-## Technologies
-JavaScript
-jQuery
-HTML
-CSS
+## How to Play
 
-## Wireframes 
-![Screenshot](./screenshots/trulia.png)
-![Screenshot](./screenshots/roadtorock.png)
+1. Enter your name and select a difficulty level
+2. Click the play button to hear a song clip (one listen only!)
+3. Type the artist's name and submit
+4. Get 3 wrong and it's game over — make it through all 10 to win
 
-## Video Citations
-Jimi Hendrix: https://www.youtube.com/watch?v=wDvlErh5zcc <br />
-Led Zeppelin: https://www.youtube.com/watch?v=DohsUDR7otk&index=1&list=PLiEZ9LQoMtiWgd2LukE9vR6zXvcGLDE5h <br />
-Beatles: https://www.youtube.com/watch?v=TMrCL-tWTCc <br />
-Doors: https://www.youtube.com/watch?v=A7KRVAWx3nU <br />
-Lose Video: https://www.youtube.com/watch?v=M5QGkOGZubQ <br />
-Congrats Video: https://www.youtube.com/watch?v=jtN8oBjMr_E <br />
+## Difficulty Levels
+
+- **Easy** — Led Zeppelin, Pink Floyd, Rolling Stones, and more household names
+- **Medium** — AC/DC, Jimi Hendrix, The Who, and other devoted-listener picks
+- **Hard** — Cream, Golden Earring, Steppenwolf, and deep cuts for true connoisseurs
+
+## Tech Stack
+
+- Vanilla JavaScript (ES6+)
+- HTML5 / CSS3
+- HTML5 Audio API
+- No frameworks or dependencies
+
+## Running Locally
+
+Just open `index.html` in a browser, or serve with any static file server:
+
+```bash
+npx serve .
+```
+
+## Architecture
+
+See [REVAMP.md](./REVAMP.md) for detailed architecture decisions, design system, and technical tradeoffs.
