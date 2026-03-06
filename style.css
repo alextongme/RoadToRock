@@ -63,6 +63,29 @@ body {
   display: none;
 }
 
+#gamevid {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 0;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  filter: blur(4px) brightness(0.3);
+  transition: filter 1s ease;
+}
+
+#gamevid.hidden {
+  display: none;
+}
+
+#gamevid.unblurred {
+  filter: blur(0px) brightness(0.7);
+}
+
 /* ---- Atmospheric Layers ---- */
 #noise-canvas {
   position: fixed;
@@ -477,6 +500,37 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 1.5rem;
+}
+
+.play-zone-row {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.speaker-img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  opacity: 0.5;
+  transition: opacity 0.3s;
+}
+
+.speaker-img.active {
+  opacity: 1;
+}
+
+.guitarist-img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  border-radius: 50%;
+  opacity: 0.5;
+  transition: opacity 0.3s;
+}
+
+.guitarist-img.active {
+  opacity: 1;
 }
 
 .play-button {
@@ -941,6 +995,20 @@ body {
 
   .waveform {
     width: 220px;
+  }
+
+  .speaker-img {
+    width: 36px;
+    height: 36px;
+  }
+
+  .play-zone-row {
+    gap: 1rem;
+  }
+
+  .guitarist-img {
+    width: 60px;
+    height: 60px;
   }
 
   .result-score-display {

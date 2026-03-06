@@ -168,14 +168,23 @@ function showScreen(name) {
   screens[name].classList.add('active');
   state.screen = name;
 
-  // Show/hide video background
-  const vid = $('#bgvid');
-  if (vid) {
-    if (name === 'landing') {
-      vid.classList.remove('hidden');
-    } else {
-      vid.classList.add('hidden');
-    }
+  const introVid = $('#bgvid');
+  const gameVid = $('#gamevid');
+
+  if (name === 'landing') {
+    introVid.classList.remove('hidden');
+    gameVid.classList.add('hidden');
+    // Reset game video for next play
+    gameVid.src = 'ledzeppelin.webm';
+    gameVid.muted = true;
+    gameVid.classList.remove('unblurred');
+  } else if (name === 'game') {
+    introVid.classList.add('hidden');
+    gameVid.classList.remove('hidden');
+    gameVid.play();
+  } else if (name === 'result') {
+    introVid.classList.add('hidden');
+    gameVid.classList.remove('hidden');
   }
 }
 
@@ -278,6 +287,13 @@ function loadRound() {
     $('#play-btn').classList.remove('is-playing');
     $('.waveform').classList.remove('active');
     $('.play-text').textContent = 'REPLAY';
+    // Stop speaker/guitarist animation
+    $('#speaker1').src = 'speaker.png';
+    $('#speaker2').src = 'speaker.png';
+    $('#speaker1').classList.remove('active');
+    $('#speaker2').classList.remove('active');
+    $('#guitarist').src = 'guitarist.jpg';
+    $('#guitarist').classList.remove('active');
   });
 }
 
@@ -294,6 +310,13 @@ function toggleAudio() {
     playBtn.classList.remove('is-playing');
     $('.waveform').classList.remove('active');
     $('.play-text').textContent = 'PLAY';
+    // Stop speaker/guitarist animation
+    $('#speaker1').src = 'speaker.png';
+    $('#speaker2').src = 'speaker.png';
+    $('#speaker1').classList.remove('active');
+    $('#speaker2').classList.remove('active');
+    $('#guitarist').src = 'guitarist.jpg';
+    $('#guitarist').classList.remove('active');
   } else {
     // Play or resume
     state.currentAudio.play();
@@ -302,6 +325,13 @@ function toggleAudio() {
     playBtn.classList.add('is-playing');
     $('.waveform').classList.add('active');
     $('.play-text').textContent = 'LISTEN';
+    // Animate speakers and guitarist
+    $('#speaker1').src = 'speaker.gif';
+    $('#speaker2').src = 'speaker.gif';
+    $('#speaker1').classList.add('active');
+    $('#speaker2').classList.add('active');
+    $('#guitarist').src = 'guitarist.gif';
+    $('#guitarist').classList.add('active');
 
     // Enable answer input on first play
     const input = $('#answer-input');
@@ -333,6 +363,13 @@ function submitAnswer() {
   $('#play-btn').classList.remove('is-playing');
   $('#play-btn').disabled = true;
   $('.waveform').classList.remove('active');
+  // Stop speaker/guitarist animation
+  $('#speaker1').src = 'speaker.png';
+  $('#speaker2').src = 'speaker.png';
+  $('#speaker1').classList.remove('active');
+  $('#speaker2').classList.remove('active');
+  $('#guitarist').src = 'guitarist.jpg';
+  $('#guitarist').classList.remove('active');
 
   // Update state
   if (isCorrect) {
@@ -413,6 +450,17 @@ function endGame() {
         'Keep listening, keep learning.',
       ];
   $('#result-message').textContent = messages[Math.floor(Math.random() * messages.length)];
+
+  // Swap video on win
+  const gameVid = $('#gamevid');
+  if (won) {
+    gameVid.src = 'willywonka.webm';
+    gameVid.currentTime = 0;
+    gameVid.muted = false;
+    gameVid.volume = 0.8;
+    gameVid.classList.add('unblurred');
+    gameVid.play();
+  }
 
   // Reset animations by re-rendering
   const content = $('.result-content');
