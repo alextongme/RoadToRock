@@ -508,31 +508,6 @@ body {
   gap: 1.5rem;
 }
 
-.speaker-img {
-  width: 48px;
-  height: 48px;
-  object-fit: contain;
-  opacity: 0.5;
-  transition: opacity 0.3s;
-}
-
-.speaker-img.active {
-  opacity: 1;
-}
-
-.guitarist-img {
-  width: 80px;
-  height: 80px;
-  object-fit: contain;
-  border-radius: 50%;
-  opacity: 0.5;
-  transition: opacity 0.3s;
-}
-
-.guitarist-img.active {
-  opacity: 1;
-}
-
 .play-button {
   width: 140px;
   height: 140px;
@@ -573,7 +548,7 @@ body {
 }
 
 .play-icon,
-.playing-icon {
+.pause-icon {
   width: 32px;
   height: 32px;
   color: var(--gold);
@@ -997,18 +972,8 @@ body {
     width: 220px;
   }
 
-  .speaker-img {
-    width: 36px;
-    height: 36px;
-  }
-
   .play-zone-row {
     gap: 1rem;
-  }
-
-  .guitarist-img {
-    width: 60px;
-    height: 60px;
   }
 
   .result-score-display {

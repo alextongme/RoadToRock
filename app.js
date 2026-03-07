@@ -287,13 +287,6 @@ function loadRound() {
     $('#play-btn').classList.remove('is-playing');
     $('.waveform').classList.remove('active');
     $('.play-text').textContent = 'REPLAY';
-    // Stop speaker/guitarist animation
-    $('#speaker1').src = 'speaker.png';
-    $('#speaker2').src = 'speaker.png';
-    $('#speaker1').classList.remove('active');
-    $('#speaker2').classList.remove('active');
-    $('#guitarist').src = 'guitarist.jpg';
-    $('#guitarist').classList.remove('active');
   });
 }
 
@@ -310,13 +303,6 @@ function toggleAudio() {
     playBtn.classList.remove('is-playing');
     $('.waveform').classList.remove('active');
     $('.play-text').textContent = 'PLAY';
-    // Stop speaker/guitarist animation
-    $('#speaker1').src = 'speaker.png';
-    $('#speaker2').src = 'speaker.png';
-    $('#speaker1').classList.remove('active');
-    $('#speaker2').classList.remove('active');
-    $('#guitarist').src = 'guitarist.jpg';
-    $('#guitarist').classList.remove('active');
   } else {
     // Play or resume
     state.currentAudio.play();
@@ -325,13 +311,6 @@ function toggleAudio() {
     playBtn.classList.add('is-playing');
     $('.waveform').classList.add('active');
     $('.play-text').textContent = 'LISTEN';
-    // Animate speakers and guitarist
-    $('#speaker1').src = 'speaker.gif';
-    $('#speaker2').src = 'speaker.gif';
-    $('#speaker1').classList.add('active');
-    $('#speaker2').classList.add('active');
-    $('#guitarist').src = 'guitarist.gif';
-    $('#guitarist').classList.add('active');
 
     // Enable answer input on first play
     const input = $('#answer-input');
@@ -363,13 +342,6 @@ function submitAnswer() {
   $('#play-btn').classList.remove('is-playing');
   $('#play-btn').disabled = true;
   $('.waveform').classList.remove('active');
-  // Stop speaker/guitarist animation
-  $('#speaker1').src = 'speaker.png';
-  $('#speaker2').src = 'speaker.png';
-  $('#speaker1').classList.remove('active');
-  $('#speaker2').classList.remove('active');
-  $('#guitarist').src = 'guitarist.jpg';
-  $('#guitarist').classList.remove('active');
 
   // Update state
   if (isCorrect) {
